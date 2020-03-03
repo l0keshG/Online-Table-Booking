@@ -1,4 +1,4 @@
-from utils_test import connectToDb
+from utils import connectToDb
 from sql_scripts.select_scripts import restaurant
 
 cur = connectToDb()
