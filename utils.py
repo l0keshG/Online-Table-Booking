@@ -4,7 +4,8 @@ import logging
 from settings import config
 logging.basicConfig(filename="newfile.log", 
                     format='%(asctime)s %(message)s', 
-                    filemode='w')
+                    filemode='w',
+					level=logging.INFO)
 log = logging.getLogger()
 
 def connectToDb():

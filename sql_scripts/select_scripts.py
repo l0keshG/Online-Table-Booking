@@ -1,4 +1,4 @@
-restaurant = 'select * from booking.restaurants'
+restaurant = 'select * from booking.restaurant'
 
 menus = 'select * from booking.menus'
 
@@ -8,5 +8,5 @@ tables = 'select * from booking.tables'
 
 #select menu with restaurant and tables
 
-custom_menu = f'select * from booking.menus where restaurant_id = {a} and tables_id= {b}'.format(a,b)
+custom_menu = 'select * from booking.menus where restaurant_id = r_id and tables_id= t_id'
 
