@@ -1,0 +1,6 @@
+{
+	"dbname": "Postgres",
+	"user": "*******",
+	"password": "*******",
+	"host": "localhost"
+}
