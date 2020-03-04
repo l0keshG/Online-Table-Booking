@@ -1,4 +1,4 @@
-import psycopg2 as pg
+from mysql.connector import connection
 import logging
 
 from settings import config
@@ -19,11 +19,11 @@ def connectToDb():
 
 	    db_details = config.load_config()
 	    connectionString = "dbname={0} user={1} password={2} host={3}".format(db_details['dbname'], db_details['user'], db_details['password'], db_details['host'])
-	    client = pg.connect(connectionString)
+	    client = connection.connect(connectionString)
 	    client.autocommit = True
 	    return client.cursor()
 
 	except Exception as exc:
-	    log.error("Error connecting to mongo: %r", exc)
+	    log.error("Error connecting to mysql: %r", exc)
 	else:
 		log.info("Connected to db")
