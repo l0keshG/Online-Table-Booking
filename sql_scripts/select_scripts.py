@@ -12,3 +12,12 @@ orders = 'select * from booking.order_details'
 
 custom_menu = 'select * from booking.menus where restaurant_id = {} and tables_id= {}'
 
+#select by id
+
+menu_id = 'select * from booking.menus where id={}'
+
+user_detail_id = 'select * from booking.user_details where id = {}'
+
+table_id = 'select * from booking.tables where id = {}'
+
+order_id = 'select * from booking.order_details where id = {}'

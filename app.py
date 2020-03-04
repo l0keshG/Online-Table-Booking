@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from controllers.restaurant import get_restaurants
 from controllers.menu import get_menu_data, custom_menu_details
 from controllers.table import get_table_data
-from controllers.order import post_order_details, get_order_details
+from controllers.order import post_order_details, get_order_details, post_online_order_details
 from controllers.user_details import get_user_data
 
 app = Flask(__name__)
@@ -40,6 +40,14 @@ def order_details():
     elif request.method == 'GET':
         data = get_order_details()
         return jsonify(data), 200
+
+@app.route('/online_order_details', methods=['POST'])
+def online_order_details():
+    if request.method == 'POST':
+
+        data = post_online_order_details(request)
+        return jsonify(data), 201
+
 
 @app.route('/custom_menu', methods=['GET'])
 def get_custom_menu_details():
